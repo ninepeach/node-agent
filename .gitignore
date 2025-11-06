@@ -1,32 +1,94 @@
-# If you prefer the allow list template instead of the deny list, see community template:
-# https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
-#
-# Binaries for programs and plugins
-*.exe
-*.exe~
-*.dll
-*.so
-*.dylib
-
-# Test binary, built with `go test -c`
-*.test
-
-# Code coverage profiles and other test artifacts
+# --------------------
+# GO BUILD ARTIFACTS
+# --------------------
+bin/
+build/
+dist/
+out/
 *.out
+*.exe
+*.test
+*.prof
+*.cover
+*.cov
+*.log
+
+# Go modules / deps cache
+vendor/
+Godeps/
+
+# Go coverage reports
 coverage.*
 *.coverprofile
-profile.cov
+*.covprofile
 
-# Dependency directories (remove the comment below to include it)
-# vendor/
-
-# Go workspace file
+# --------------------
+# GOPLS / CACHE
+# --------------------
+.gopath/
+.gocache/
+.goget/
+.go-work
 go.work
 go.work.sum
 
-# env file
-.env
+# --------------------
+# IDE / EDITOR
+# --------------------
+.vscode/
+.idea/
+*.iml
 
-# Editor/IDE
-# .idea/
-# .vscode/
+# JetBrains / Goland
+*.ipr
+*.iws
+*.bak
+
+# --------------------
+# OS SYSTEM FILES
+# --------------------
+.DS_Store
+Thumbs.db
+
+# --------------------
+# Temporary / Runtime
+# --------------------
+*.pid
+*.tmp
+tmp/
+cache/
+data/
+
+# --------------------
+# SSH / Secrets (确保不要提交密钥)
+# --------------------
+*.pem
+*.key
+*.crt
+*.pfx
+*.env
+.env
+.env.*
+secrets/
+private/
+certs/
+config/local.yaml
+
+# --------------------
+# Git Submodules (if using sagernet/utls)
+# --------------------
+third_party/utls/.git
+third_party/utls/.github/
+third_party/utls/testdata/
+
+# --------------------
+# Node-Agent Project specific
+# --------------------
+# compiled CLI
+node-agent
+
+# debug dumps
+logs/
+debug/
+trace/
+stackdump.*
